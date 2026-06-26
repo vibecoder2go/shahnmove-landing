@@ -172,9 +172,16 @@ h1, h2, h3, p { margin-top: 0; }
   color: var(--muted);
   font-size: 14px;
 }
+.sr-section {
+  margin: 16px 0 4px;
+  font: 700 11px/1 var(--display);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #8a98a0;
+}
 .sr-findings {
   list-style: none;
-  margin: 4px 0 0;
+  margin: 0;
   padding: 0;
 }
 .sr-findings li {
