@@ -523,6 +523,12 @@ h1, h2, h3, p { margin-top: 0; }
   color: var(--green-light);
   font-size: 12px;
 }
+.form-note {
+  grid-column: 1 / -1;
+  margin: 2px 0 0;
+  color: rgba(255,255,255,.55);
+  font-size: 12px;
+}
 
 footer {
   padding: 66px max(4vw, calc((100vw - 1480px) / 2 + 4vw));
