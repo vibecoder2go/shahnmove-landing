@@ -77,7 +77,7 @@ document.querySelectorAll('.lead-form').forEach((form) => {
         keepalive: true
       });
 
-      status.textContent = 'Thank you. We will be in touch about your free audit.';
+      status.textContent = 'Thank you. A manager will be in touch shortly about your free audit.';
       form.reset();
     } catch (error) {
       status.textContent = 'Thank you. Your request was saved locally, but lead capture is not configured yet.';

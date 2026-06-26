@@ -120,7 +120,7 @@ h1, h2, h3, p { margin-top: 0; }
 .photo-label {
   position: absolute;
   left: 9%;
-  bottom: 58px;
+  top: 36px;
   color: var(--white);
 }
 .photo-label span {
@@ -131,21 +131,63 @@ h1, h2, h3, p { margin-top: 0; }
   color: #9fdcc9;
 }
 .photo-label strong { font: 600 22px var(--display); }
-.hero-audience {
+.sample-report {
   position: absolute;
-  left: 9%;
-  right: 9%;
-  bottom: 132px;
-  margin: 0;
-  padding: 20px 22px;
-  max-width: 560px;
-  background: rgba(7,31,44,.72);
-  border: 1px solid rgba(255,255,255,.16);
-  color: #e6f0f2;
-  font-size: 18px;
-  line-height: 1.48;
-  font-weight: 600;
-  backdrop-filter: blur(12px);
+  left: 8%;
+  bottom: 56px;
+  width: min(420px, 84%);
+  padding: 22px 24px;
+  background: rgba(255,255,255,.97);
+  color: var(--ink);
+  box-shadow: 0 34px 70px rgba(7,31,44,.45);
+}
+.sr-head {
+  display: flex;
+  justify-content: space-between;
+  font: 700 11px/1 var(--display);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--green-dark);
+  margin-bottom: 18px;
+}
+.sr-head span:last-child { color: var(--muted); }
+.sr-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.sr-metrics strong {
+  display: block;
+  font: 600 25px/1 var(--display);
+  letter-spacing: -.01em;
+}
+.sr-metrics strong i { font-style: normal; color: var(--muted); font-size: 15px; }
+.sr-metrics small {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.sr-findings {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+}
+.sr-findings li {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  font-size: 13px;
+  padding: 7px 0;
+  color: #3a4a52;
+}
+.sr-findings b { color: var(--ink); white-space: nowrap; font-weight: 700; }
+.sr-foot {
+  margin: 13px 0 0;
+  font-size: 11px;
+  color: var(--muted);
 }
 .pilot-content {
   padding: 110px 4vw 110px 8vw;
@@ -627,16 +669,17 @@ footer small {
     padding: 68px 0 0;
   }
   .pilot-photo {
-    height: 430px;
+    height: 660px;
     margin: 0;
   }
-  .hero-audience {
-    left: 20px;
-    right: 20px;
-    bottom: 122px;
+  .sample-report {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    width: auto;
     padding: 16px 18px;
-    font-size: 15px;
   }
+  .sr-metrics strong { font-size: 21px; }
   .pilot-content {
     padding: 74px 20px 78px;
   }
