@@ -114,7 +114,7 @@ h1, h2, h3, p { margin-top: 0; }
 }
 .pilot-photo {
   margin-left: calc(-1 * max(4vw, calc((100vw - 1480px) / 2 + 4vw)));
-  background: linear-gradient(180deg, rgba(7,31,44,.18) 40%, rgba(7,31,44,.82)), url('assets/warehouse.jpg') center/cover;
+  background: linear-gradient(180deg, rgba(7,31,44,.18) 40%, rgba(7,31,44,.82)), url('assets/hero-port.jpg') center/cover;
   position: relative;
 }
 .photo-label {
@@ -181,7 +181,7 @@ h1, h2, h3, p { margin-top: 0; }
 .check-list li {
   padding: 13px 0;
   border-bottom: 1px solid rgba(255,255,255,.18);
-  font-size: 15px;
+  font-size: 16px;
   color: #d5e2e7;
 }
 .check-list span {
