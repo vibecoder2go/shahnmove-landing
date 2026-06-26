@@ -89,3 +89,34 @@ document.querySelectorAll('.lead-form').forEach((form) => {
 });
 
 document.querySelector('#year').textContent = new Date().getFullYear();
+
+(function () {
+  const root = document.documentElement;
+  const nodes = document.querySelectorAll('[data-ar]');
+  nodes.forEach((n) => { n.dataset.en = n.textContent; });
+  const phs = document.querySelectorAll('[data-ar-ph]');
+  phs.forEach((n) => { n.dataset.enPh = n.getAttribute('placeholder') || ''; });
+
+  function apply(lang) {
+    const ar = lang === 'ar';
+    root.lang = ar ? 'ar' : 'en';
+    root.classList.toggle('lang-ar', ar);
+    nodes.forEach((n) => { n.textContent = ar ? n.dataset.ar : n.dataset.en; });
+    phs.forEach((n) => { n.setAttribute('placeholder', ar ? n.dataset.arPh : n.dataset.enPh); });
+    document.querySelectorAll('[data-lang-toggle]').forEach((b) => {
+      b.textContent = ar ? 'English' : 'العربية';
+    });
+    try { localStorage.setItem('shahnmove-lang', lang); } catch (e) {}
+  }
+
+  let lang = 'en';
+  try { lang = localStorage.getItem('shahnmove-lang') || 'en'; } catch (e) {}
+
+  document.querySelectorAll('[data-lang-toggle]').forEach((b) => {
+    b.addEventListener('click', () => {
+      apply(root.classList.contains('lang-ar') ? 'en' : 'ar');
+    });
+  });
+
+  apply(lang);
+})();

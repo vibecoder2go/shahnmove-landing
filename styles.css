@@ -244,7 +244,7 @@ h1, h2, h3, p { margin-top: 0; }
   font-size: 16px;
   color: #d5e2e7;
 }
-.check-list span {
+.check-list li > span:first-child {
   color: var(--green-light);
   margin-right: 13px;
   font-weight: 700;
@@ -755,4 +755,65 @@ footer small {
     transform: none;
     transition: none;
   }
+}
+
+.lang-toggle {
+  font-family: "Tajawal", var(--body);
+  font-weight: 700;
+  font-size: 13px;
+  color: rgba(255,255,255,.9);
+  background: none;
+  border: 1px solid rgba(255,255,255,.3);
+  padding: 5px 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color .2s, border-color .2s;
+}
+.lang-toggle:hover { color: var(--green-light); border-color: var(--green-light); }
+
+.lang-ar body { font-family: "Tajawal", sans-serif; }
+.lang-ar .pilot-content,
+.lang-ar .ecosystem-copy,
+.lang-ar .pilot-copy,
+.lang-ar .deliverables,
+.lang-ar .security-copy,
+.lang-ar .process-head,
+.lang-ar .steps article,
+.lang-ar .intelligence-layer,
+.lang-ar .contact-copy,
+.lang-ar .lead-form,
+.lang-ar .photo-label,
+.lang-ar .sample-report,
+.lang-ar .ecosystem-grid article,
+.lang-ar .cap-list article,
+.lang-ar .shield-card,
+.lang-ar footer p,
+.lang-ar footer nav {
+  direction: rtl;
+  text-align: right;
+}
+.lang-ar .pilot-hero h1,
+.lang-ar .section h2,
+.lang-ar .contact h2,
+.lang-ar .deliverables h3,
+.lang-ar .steps h3,
+.lang-ar .intelligence-layer h3,
+.lang-ar .cap-list strong,
+.lang-ar .ecosystem-grid strong,
+.lang-ar .shield-card strong,
+.lang-ar .photo-label strong,
+.lang-ar .sr-head,
+.lang-ar .sr-section,
+.lang-ar .kicker {
+  font-family: "Tajawal", sans-serif;
+}
+.lang-ar .kicker,
+.lang-ar .sr-head,
+.lang-ar .sr-section,
+.lang-ar .photo-label span {
+  letter-spacing: 0;
+}
+.lang-ar .check-list li > span:first-child {
+  margin-right: 0;
+  margin-left: 13px;
 }
