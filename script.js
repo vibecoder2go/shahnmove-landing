@@ -77,13 +77,13 @@ document.querySelectorAll('.lead-form').forEach((form) => {
         keepalive: true
       });
 
-      status.textContent = 'Thank you. We will contact you to discuss a focused pilot.';
+      status.textContent = 'Thank you. We will be in touch about your free audit.';
       form.reset();
     } catch (error) {
       status.textContent = 'Thank you. Your request was saved locally, but lead capture is not configured yet.';
     } finally {
       button.disabled = false;
-      button.textContent = 'Discuss a pilot';
+      button.textContent = 'Request free audit';
     }
   });
 });
