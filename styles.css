@@ -178,6 +178,32 @@ h1, h2, h3, p { margin-top: 0; }
   line-height: 1.45;
   color: var(--muted);
 }
+.sr-scale {
+  margin: 16px 0 0;
+  padding: 11px 14px;
+  background: rgba(10,138,67,.08);
+  border-left: 3px solid var(--green);
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+.sr-scale strong {
+  font: 600 19px/1 var(--display);
+  color: var(--green-dark);
+  white-space: nowrap;
+}
+.sr-scale span {
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+.lang-ar .sr-scale {
+  direction: rtl;
+  text-align: right;
+  border-left: 0;
+  border-right: 3px solid var(--green);
+}
 .sr-section {
   margin: 16px 0 4px;
   font: 700 11px/1 var(--display);
