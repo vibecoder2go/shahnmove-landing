@@ -165,7 +165,7 @@ h1, h2, h3, p { margin-top: 0; }
 }
 .sr-money { color: var(--green-dark); }
 .sr-score { color: #b5791f; }
-.sr-metrics strong i { font-style: normal; color: var(--muted); font-size: 20px; }
+.sr-metrics strong i { font-style: normal; color: var(--muted); }
 .sr-metrics small {
   display: block;
   margin-top: 7px;
