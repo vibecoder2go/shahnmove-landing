@@ -152,19 +152,19 @@ h1, h2, h3, p { margin-top: 0; }
   align-self: center;
 }
 .kicker {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   color: var(--green);
-  font-size: clamp(19px, 2vw, 30px);
+  font-size: clamp(11px, 1vw, 15px);
   text-transform: uppercase;
-  letter-spacing: .12em;
+  letter-spacing: .14em;
   font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 13px;
 }
 .kicker:before {
   content: "";
-  width: 52px;
+  width: 34px;
   border-top: 2px solid currentColor;
 }
 .kicker-light { color: var(--green-light); }
