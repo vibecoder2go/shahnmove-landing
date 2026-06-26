@@ -310,16 +310,17 @@ h1, h2, h3, p { margin-top: 0; }
 .ecosystem { background: var(--white); }
 .ecosystem-copy {
   display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  gap: 7vw;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 4vw;
   align-items: start;
+  max-width: 1060px;
 }
-.ecosystem-copy h2 { grid-row: span 3; }
-.ecosystem-copy p:not(.kicker) {
+.ecosystem-text p:not(.kicker) {
   color: var(--muted);
   font-size: 17px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
+.ecosystem-text p:last-child { margin-bottom: 0; }
 .ecosystem-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
