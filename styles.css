@@ -79,8 +79,13 @@ h1, h2, h3, p { margin-top: 0; }
 }
 .desktop-nav a, .header-cta { transition: color .2s, opacity .2s; }
 .desktop-nav a:hover, .header-cta:hover { color: var(--green-light); }
-.header-cta {
+.header-end {
   justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.header-cta {
   min-height: 42px;
   padding: 0 16px;
   display: inline-flex;
@@ -408,12 +413,80 @@ h1, h2, h3, p { margin-top: 0; }
 }
 .security-copy .compact-list { margin-top: 34px; }
 .security-visual {
-  min-height: 560px;
+  min-height: 460px;
   position: relative;
   overflow: hidden;
   background: #092632;
   border: 1px solid rgba(7,31,44,.12);
   box-shadow: 0 30px 70px rgba(7,31,44,.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 44px;
+}
+.sec-boundary {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  border: 1.5px dashed rgba(87,207,140,.5);
+  padding: 30px 24px 24px;
+}
+.sec-boundary-label {
+  position: absolute;
+  top: -10px;
+  left: 22px;
+  background: #092632;
+  padding: 0 10px;
+  font: 700 11px/1 var(--display);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--green-light);
+}
+.sec-core {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  padding: 26px 22px;
+  text-align: center;
+}
+.sec-core svg {
+  width: 42px;
+  height: 42px;
+  fill: none;
+  stroke: var(--green-light);
+  stroke-width: 2.4;
+  margin-bottom: 14px;
+}
+.sec-core strong {
+  display: block;
+  font: 600 21px/1.2 var(--display);
+  color: var(--white);
+}
+.sec-core small {
+  display: block;
+  margin-top: 9px;
+  font-size: 13px;
+  color: #9fb2ba;
+}
+.sec-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.sec-tags span {
+  font-size: 12px;
+  color: #cfe3da;
+  border: 1px solid rgba(87,207,140,.32);
+  padding: 7px 12px;
+}
+.lang-ar .sec-boundary-label {
+  left: auto;
+  right: 22px;
+  letter-spacing: 0;
+}
+.lang-ar .sec-core strong,
+.lang-ar .sec-boundary-label {
+  font-family: "Tajawal", sans-serif;
 }
 .map-layer {
   position: absolute;
@@ -659,8 +732,9 @@ footer small {
 }
 
 @media (max-width: 1120px) {
-  .site-header { grid-template-columns: 1fr auto; }
+  .site-header { grid-template-columns: 1fr auto auto; }
   .desktop-nav, .header-cta { display: none; }
+  .header-end { gap: 10px; }
   .menu-button { display: block; }
   .site-header.menu-open {
     height: auto;
@@ -678,7 +752,7 @@ footer small {
     gap: 20px;
   }
   .site-header.menu-open .menu-button {
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 1;
   }
   .pilot-hero,

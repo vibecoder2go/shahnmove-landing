@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
   <script src="leads-config.js" defer></script>
   <script src="script.js?v=2" defer></script>
 </head>
@@ -29,9 +29,11 @@
       <a href="#security" data-ar="الأمان">Security</a>
       <a href="#process" data-ar="كيف يعمل">How it works</a>
       <a href="#contact" data-ar="تواصل معنا">Contact</a>
-      <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">العربية</button>
     </nav>
-    <a class="header-cta" href="#contact" data-ar="اطلب تدقيقًا مجانيًا">Request free audit</a>
+    <div class="header-end">
+      <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">العربية</button>
+      <a class="header-cta" href="#contact" data-ar="اطلب تدقيقًا مجانيًا">Request free audit</a>
+    </div>
     <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
   </header>
 
@@ -154,20 +156,19 @@
           <li data-ar="تحليلات ذكاء اصطناعي مُتحكَّم بها ضمن نطاقات بيانات معتمدة">Controlled AI analytics within approved data scopes</li>
         </ul>
       </div>
-      <div class="security-visual reveal" aria-label="Protected logistics data layer over a regional network">
-        <div class="map-layer"></div>
-        <div class="secure-grid">
-          <span></span><span></span><span></span><span></span>
-        </div>
-        <div class="shield-card">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 12 14v16c0 14 8.8 23.5 20 28 11.2-4.5 20-14 20-28V14z"/><path d="m23 32 6 6 13-15"/></svg>
-          <strong data-ar="نطاقات بيانات معتمدة">Approved data scopes</strong>
-          <small data-ar="يبقى الوصول والملكية وحدود التدقيق مرئية.">Access, ownership and audit boundaries stay visible.</small>
-        </div>
-        <div class="audit-trail">
-          <i></i><span data-ar="سياسة الوصول">Access policy</span>
-          <i></i><span data-ar="حدث تكامل">Integration event</span>
-          <i></i><span data-ar="سجل تدقيق">Audit log</span>
+      <div class="security-visual reveal" aria-label="How ShahnMove keeps your logistics data protected">
+        <div class="sec-boundary">
+          <span class="sec-boundary-label" data-ar="السعودية · أو في بنيتك التحتية">Saudi Arabia · or your own infrastructure</span>
+          <div class="sec-core">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6 12 14v16c0 14 8.8 23.5 20 28 11.2-4.5 20-14 20-28V14z"/><path d="m23 32 6 6 13-15"/></svg>
+            <strong data-ar="بياناتك اللوجستية">Your logistics data</strong>
+            <small data-ar="ملكية العميل · تُحذف عند الطلب">Customer-owned · deleted on request</small>
+          </div>
+          <div class="sec-tags">
+            <span data-ar="وصول حسب الدور">Role-based access</span>
+            <span data-ar="سجل تدقيق كامل">Full audit log</span>
+            <span data-ar="NDA قبل أي بيانات">NDA before any data</span>
+          </div>
         </div>
       </div>
     </section>
