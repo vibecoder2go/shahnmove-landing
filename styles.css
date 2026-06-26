@@ -134,9 +134,9 @@ h1, h2, h3, p { margin-top: 0; }
 .sample-report {
   position: absolute;
   left: 8%;
-  bottom: 56px;
-  width: min(420px, 84%);
-  padding: 22px 24px;
+  bottom: 50px;
+  width: min(470px, 86%);
+  padding: 24px 26px;
   background: rgba(255,255,255,.97);
   color: var(--ink);
   box-shadow: 0 34px 70px rgba(7,31,44,.45);
@@ -144,7 +144,7 @@ h1, h2, h3, p { margin-top: 0; }
 .sr-head {
   display: flex;
   justify-content: space-between;
-  font: 700 11px/1 var(--display);
+  font: 700 12px/1 var(--display);
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--green-dark);
@@ -155,39 +155,44 @@ h1, h2, h3, p { margin-top: 0; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
-  padding-bottom: 16px;
+  padding-bottom: 18px;
   border-bottom: 1px solid var(--line);
 }
 .sr-metrics strong {
   display: block;
-  font: 600 25px/1 var(--display);
+  font: 600 27px/1 var(--display);
   letter-spacing: -.01em;
 }
-.sr-metrics strong i { font-style: normal; color: var(--muted); font-size: 15px; }
+.sr-money { color: var(--green-dark); }
+.sr-score { color: #b5791f; }
+.sr-metrics strong i { font-style: normal; color: var(--muted); font-size: 20px; }
 .sr-metrics small {
   display: block;
-  margin-top: 5px;
+  margin-top: 7px;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
 }
 .sr-findings {
   list-style: none;
-  margin: 14px 0 0;
+  margin: 4px 0 0;
   padding: 0;
 }
 .sr-findings li {
   display: flex;
   justify-content: space-between;
-  gap: 14px;
-  font-size: 13px;
-  padding: 7px 0;
+  gap: 16px;
+  font-size: 15px;
+  padding: 11px 0;
   color: #3a4a52;
 }
+.sr-findings li + li { border-top: 1px solid var(--line); }
 .sr-findings b { color: var(--ink); white-space: nowrap; font-weight: 700; }
+.sr-findings em { color: var(--muted); white-space: nowrap; font-style: normal; font-weight: 600; }
 .sr-foot {
-  margin: 13px 0 0;
-  font-size: 11px;
+  margin: 14px 0 0;
+  font-size: 13px;
   color: var(--muted);
+  text-align: right;
 }
 .pilot-content {
   padding: 110px 4vw 110px 8vw;
@@ -669,17 +674,18 @@ footer small {
     padding: 68px 0 0;
   }
   .pilot-photo {
-    height: 660px;
+    height: auto;
+    padding-top: 340px;
     margin: 0;
+    background-position: center top;
   }
   .sample-report {
-    left: 16px;
-    right: 16px;
-    bottom: 16px;
+    position: static;
     width: auto;
-    padding: 16px 18px;
+    margin: 0 16px 6px;
+    padding: 20px 20px;
   }
-  .sr-metrics strong { font-size: 21px; }
+  .sr-metrics strong { font-size: 23px; }
   .pilot-content {
     padding: 74px 20px 78px;
   }
