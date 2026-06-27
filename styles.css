@@ -326,6 +326,10 @@ h1, h2, h3, p { margin-top: 0; }
   margin-bottom: 16px;
 }
 .ecosystem-text p:last-child { margin-bottom: 0; }
+.ecosystem-text p.eco-lead {
+  color: var(--ink);
+  font-weight: 500;
+}
 .ecosystem-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -424,69 +428,112 @@ h1, h2, h3, p { margin-top: 0; }
   justify-content: center;
   padding: 44px;
 }
-.sec-boundary {
-  position: relative;
+.sec-console {
   width: 100%;
-  max-width: 400px;
-  border: 1.5px dashed rgba(87,207,140,.5);
-  padding: 30px 24px 24px;
+  max-width: 440px;
+  background: #0c2a35;
+  border: 1px solid rgba(255,255,255,.1);
+  box-shadow: 0 24px 60px rgba(0,0,0,.35);
 }
-.sec-boundary-label {
-  position: absolute;
-  top: -10px;
-  left: 22px;
-  background: #092632;
-  padding: 0 10px;
-  font: 700 11px/1 var(--display);
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--green-light);
+.sec-console-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
 }
-.sec-core {
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.14);
-  padding: 26px 22px;
-  text-align: center;
+.sec-console-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+  font: 600 15px var(--display);
 }
-.sec-core svg {
-  width: 42px;
-  height: 42px;
+.sec-console-title svg {
+  width: 20px;
+  height: 20px;
   fill: none;
   stroke: var(--green-light);
-  stroke-width: 2.4;
-  margin-bottom: 14px;
+  stroke-width: 2.2;
 }
-.sec-core strong {
-  display: block;
-  font: 600 21px/1.2 var(--display);
-  color: var(--white);
-}
-.sec-core small {
-  display: block;
-  margin-top: 9px;
-  font-size: 13px;
-  color: #9fb2ba;
-}
-.sec-tags {
+.sec-status {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 20px;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--green-light);
 }
-.sec-tags span {
+.sec-status i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green-light);
+  box-shadow: 0 0 0 0 rgba(87,207,140,.4);
+  animation: secPulse 2.4s ease-in-out infinite;
+}
+@keyframes secPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(87,207,140,.4); }
+  50% { box-shadow: 0 0 0 6px rgba(87,207,140,0); }
+}
+.sec-console-meta {
+  margin: 0;
+  padding: 13px 18px;
   font-size: 12px;
-  color: #cfe3da;
-  border: 1px solid rgba(87,207,140,.32);
-  padding: 7px 12px;
+  color: #9fb2ba;
+  border-bottom: 1px solid rgba(255,255,255,.08);
 }
-.lang-ar .sec-boundary-label {
-  left: auto;
-  right: 22px;
-  letter-spacing: 0;
+.sec-log-label {
+  margin: 0;
+  padding: 14px 18px 4px;
+  font: 700 10px/1 var(--display);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #7b8f97;
 }
-.lang-ar .sec-core strong,
-.lang-ar .sec-boundary-label {
+.sec-log {
+  list-style: none;
+  margin: 0;
+  padding: 4px 18px 18px;
+}
+.sec-log li {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 9px 0;
+  font-size: 13px;
+  color: #d3e0e4;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+.sec-log li:first-child { border-top: 0; }
+.sec-log li:before {
+  content: "✓";
+  color: var(--green-light);
+  font-weight: 700;
+}
+.sec-log li.deny:before { content: "⦸"; color: #e3a93f; }
+.sec-log li.deny .ev { color: #ecd09a; }
+.sec-log .t {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 12px;
+  color: #7b8f97;
+}
+.sec-log .ev { flex: 1; }
+.lang-ar .sec-console { direction: rtl; }
+.lang-ar .sec-log { direction: ltr; text-align: right; }
+.lang-ar .sec-log .ev { direction: rtl; }
+.lang-ar .sec-console-title span,
+.lang-ar .sec-status span,
+.lang-ar .sec-console-meta,
+.lang-ar .sec-log-label,
+.lang-ar .sec-log .ev {
   font-family: "Tajawal", sans-serif;
+}
+.lang-ar .sec-log-label { letter-spacing: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .sec-status i { animation: none; }
 }
 .map-layer {
   position: absolute;
